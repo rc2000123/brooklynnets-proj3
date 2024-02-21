@@ -75,6 +75,8 @@ class Link_State_Node(Node):
         self.routing_table[link_frozenset] = (latency,new_seq_num)
         self.routing_table[frozenset([neighbor,self.id])] = (latency,new_seq_num)
         
+        
+        ##MAYBE I SHOULD SEND ALL TABLES INSTEAD
         broadcast_msg = {
             "src_id": self.id,
             "dst_id": neighbor,
@@ -93,6 +95,8 @@ class Link_State_Node(Node):
         ###CHECK IF SEQ NUMBER is newer, if so, update my own routing table###
         ###and then broadcast to my neighbors
         recv_msg = json.loads(m)
+        
+        print("Node:",self.id,"Recieved message: ",recv_msg)
         
         
         #Check if neighbor changed, and make updates
@@ -131,19 +135,25 @@ class Link_State_Node(Node):
     # Return a neighbor, -1 if no path to destination
     
     def get_next_hop(self, destination):
+        
+        print("get_next_hop")
+        print("self is ", self.id)
+        print("target dest is ", destination)
+        print(self.routing_table)
         ####RUN DIJKSTRAS HERE
         #### GET A LIST OF SHORTEST PATH DISTANCES, and its corresponding path TO EVERY DEST
         ### RETURN THE NODE THAT IT SHOULD GO TO IN THE SHORTES PATH
         sptSet = []
         
+        #create a dist_dict to keep track of the shortest path, and the path itself to it
         dist_dict = {}
         
         for link in self.routing_table.keys():
             link = list(link)
-            dist_dict[link[0]] = (float('inf'),-1)
-            dist_dict[link[1]] = (float('inf'),-1)
+            dist_dict[link[0]] = (float('inf'),[])
+            dist_dict[link[1]] = (float('inf'),[])
         
-        dist_dict[self.id] = (0,-1)
+        dist_dict[self.id] = (0,[])
         
         
         
@@ -164,7 +174,9 @@ class Link_State_Node(Node):
             
             if min_node == destination:
                 #popped destination value, so just return path
-                return dist_dict[min_node][1]
+                
+                print("found, next hop is: ", dist_dict[min_node][1])
+                return dist_dict[min_node][1][0]
             
             
             sptSet.append(min_node)
@@ -178,15 +190,19 @@ class Link_State_Node(Node):
                     else:
                         dest_node = list_pair[0]  
                     
-                    if dist_dict[min_node][0] + self.routing_table[pair][1] < dist_dict[dest_node][0]:
+                    if dist_dict[min_node][0] + self.routing_table[pair][0] < dist_dict[dest_node][0]:
                         #update the dist_dict to new distance, and next value to hop to 
                         
                         ##if next hop is uninit, populate it, otherwise just update shorest path
                         
-                        if dist_dict[dest_node][1] == -1:
-                            dist_dict[dest_node] = (dist_dict[min_node][0] + self.routing_table[pair][1],dest_node)
-                        else:
-                            dist_dict[dest_node] = (dist_dict[min_node][0] + self.routing_table[pair][1],dist_dict[dest_node][1])
+                        dist_dict[dest_node] = (dist_dict[min_node][0] + self.routing_table[pair][0], dist_dict[min_node][1] + [dest_node])
+                        
+                        
+                        #if dist_dict[dest_node][1] == -1:
+                        #    dist_dict[dest_node] = (dist_dict[min_node][0] + self.routing_table[pair][1],dest_node)
+                        #else:
+                            
+                        #    dist_dict[dest_node] = (dist_dict[min_node][0] + self.routing_table[pair][1],dist_dict[dest_node][1])
                             
                 
             
