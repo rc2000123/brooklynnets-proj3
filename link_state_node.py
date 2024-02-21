@@ -46,12 +46,25 @@ class Link_State_Node(Node):
     def link_has_been_updated(self, neighbor, latency):
         #neighbor is id
         # latency = -1 if delete a link
+        
         if latency == -1 and neighbor in self.neighbors:
 
             self.neighbors.remove(neighbor)
             
         else:
-            self.neighbors.append(neighbor)
+            if neighbor not in self.neighbors:
+                #this is a new neighbor, I should send my entire routing table to get it up to speed
+                self.neighbors.append(neighbor)
+                for link_frozenset,value in self.routing_table.items():
+                    list_frozenset = list(link_frozenset)
+                    broadcast_msg = {
+                        "src_id": list_frozenset[0],
+                        "dst_id": list_frozenset[1],
+                        "new_latency": value[0],
+                        "new_seq_num": value[1]
+                    }
+                    self.send_to_neighbors(json.dumps(broadcast_msg))
+                    
         
            
             
@@ -100,17 +113,43 @@ class Link_State_Node(Node):
         
         
         #Check if neighbor changed, and make updates
+        
+        #Check if it is a neighbor 
         if recv_msg['src_id'] == self.id or recv_msg['dst_id'] == self.id:
             neighbor = 0
             if recv_msg['src_id'] == self.id :
                 neighbor = recv_msg['dst_id']
             else:
                 neighbor = recv_msg['src_id']
-        
+
+            latency = recv_msg["new_latency"] 
+            
+            if latency == -1 and neighbor in self.neighbors:
+
+                self.neighbors.remove(neighbor)
+                
+            else:
+                if neighbor not in self.neighbors:
+                    #this is a new neighbor, I should send my entire routing table to get it up to speed
+                    self.neighbors.append(neighbor)
+                    for link_frozenset,value in self.routing_table.items():
+                        list_frozenset = list(link_frozenset)
+                        broadcast_msg = {
+                            "src_id": list_frozenset[0],
+                            "dst_id": list_frozenset[1],
+                            "new_latency": value[0],
+                            "new_seq_num": value[1]
+                        }
+                        self.send_to_neighbors(json.dumps(broadcast_msg))
+            
+            
+            
+            '''
             if recv_msg["new_latency"] == -1 and neighbor in self.neighbors:
                 self.neighbors.remove(neighbor)
             else:
                 self.neighbors.append(neighbor)
+            '''
         
         
         link_frozenset = frozenset([recv_msg["src_id"],recv_msg["dst_id"]])
@@ -190,7 +229,7 @@ class Link_State_Node(Node):
                     else:
                         dest_node = list_pair[0]  
                     
-                    if dist_dict[min_node][0] + self.routing_table[pair][0] < dist_dict[dest_node][0]:
+                    if dist_dict[min_node][0] + self.routing_table[pair][0] < dist_dict[dest_node][0] and self.routing_table[pair][0] != -1:
                         #update the dist_dict to new distance, and next value to hop to 
                         
                         ##if next hop is uninit, populate it, otherwise just update shorest path
