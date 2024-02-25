@@ -19,7 +19,7 @@ class Link_State_Node(Node):
         #  d    a->b 
         
         
-        ##we should maintian a links table (of reachable nodes) that will be populated by flooding, where the key is a frozen set of  src<->dest
+        ##we should maintain a links table (of reachable nodes) that will be populated by flooding, where the key is a frozen set of  src<->dest
         ##value is [latency,seq_num]
         #self.links  = {}
         
@@ -89,7 +89,6 @@ class Link_State_Node(Node):
         self.routing_table[frozenset([neighbor,self.id])] = (latency,new_seq_num)
         
         
-        ##MAYBE I SHOULD SEND ALL TABLES INSTEAD
         broadcast_msg = {
             "src_id": self.id,
             "dst_id": neighbor,
