@@ -1,0 +1,4397 @@
+link_has_been_updated for  1
+new neighbor: 2
+new latency: 10
+run_bellman_ford for id:  1
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2]
+link_has_been_updated for  2
+new neighbor: 1
+new latency: 10
+run_bellman_ford for id:  2
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1])}
+DV HAS BEEN UPDATED, BROADCASTING TO [1]
+link_has_been_updated for  2
+new neighbor: 3
+new latency: 5
+run_bellman_ford for id:  2
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  1
+neighbor not in neighbor dvs
+for neighbor:  3
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3])}
+DV HAS BEEN UPDATED, BROADCASTING TO [1, 3]
+link_has_been_updated for  3
+new neighbor: 2
+new latency: 5
+run_bellman_ford for id:  3
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{3: (0, []), 2: (5, [2])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2]
+link_has_been_updated for  1
+new neighbor: 3
+new latency: 7
+run_bellman_ford for id:  1
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  2
+neighbor not in neighbor dvs
+for neighbor:  3
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2, 3]
+link_has_been_updated for  3
+new neighbor: 1
+new latency: 7
+run_bellman_ford for id:  3
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  2
+neighbor not in neighbor dvs
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2, 1]
+link_has_been_updated for  4
+new neighbor: 5
+new latency: 11
+run_bellman_ford for id:  4
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5]
+link_has_been_updated for  5
+new neighbor: 4
+new latency: 11
+run_bellman_ford for id:  5
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4])}
+DV HAS BEEN UPDATED, BROADCASTING TO [4]
+link_has_been_updated for  5
+new neighbor: 6
+new latency: 6
+run_bellman_ford for id:  5
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  6
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6])}
+DV HAS BEEN UPDATED, BROADCASTING TO [4, 6]
+link_has_been_updated for  6
+new neighbor: 5
+new latency: 6
+run_bellman_ford for id:  6
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{6: (0, []), 5: (6, [5])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5]
+link_has_been_updated for  4
+new neighbor: 6
+new latency: 8
+run_bellman_ford for id:  4
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  5
+neighbor not in neighbor dvs
+for neighbor:  6
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5, 6]
+link_has_been_updated for  6
+new neighbor: 4
+new latency: 8
+run_bellman_ford for id:  6
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  5
+neighbor not in neighbor dvs
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5, 4]
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1])}
+my neighbor_dvs: 
+{2: {'seq': 2, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1])}
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3])}
+my neighbor_dvs: 
+{3: {'seq': 1, 'dv': {3: [0, []], 2: [5, [2]]}}}
+for neighbor:  1
+neighbor not in neighbor dvs
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3])}
+link_has_been_updated for  3
+new neighbor: 6
+new latency: 1
+run_bellman_ford for id:  3
+my dv before: 
+{}
+my neighbor_dvs: 
+{2: {'seq': 2, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+for neighbor:  6
+neighbor not in neighbor dvs
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2, 1, 6]
+link_has_been_updated for  6
+new neighbor: 3
+new latency: 1
+run_bellman_ford for id:  6
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  5
+neighbor not in neighbor dvs
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  3
+neighbor not in neighbor dvs
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5, 4, 3]
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3])}
+my neighbor_dvs: 
+{3: {'seq': 3, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]]}}}
+for neighbor:  5
+neighbor not in neighbor dvs
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  3
+current dest:  3
+new cost:  1
+current cost:  1
+no need for change
+current dest:  2
+new cost:  6
+dest didnt exist in dv, adding...
+current dest:  1
+new cost:  8
+dest didnt exist in dv, adding...
+current dest:  6
+new cost:  2
+current cost:  0
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5, 4, 3]
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6])}
+my neighbor_dvs: 
+{2: {'seq': 2, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]]}}, 6: {'seq': 3, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+for neighbor:  6
+current dest:  6
+new cost:  1
+current cost:  1
+no need for change
+current dest:  5
+new cost:  7
+dest didnt exist in dv, adding...
+current dest:  4
+new cost:  9
+dest didnt exist in dv, adding...
+current dest:  3
+new cost:  2
+current cost:  0
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2, 1, 6]
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3])}
+my neighbor_dvs: 
+{3: {'seq': 2, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]]}}}
+for neighbor:  1
+neighbor not in neighbor dvs
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3])}
+link_has_been_updated for  4
+new neighbor: 1
+new latency: 10000000
+run_bellman_ford for id:  4
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  5
+neighbor not in neighbor dvs
+for neighbor:  6
+neighbor not in neighbor dvs
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (10000000, [1])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5, 6, 1]
+link_has_been_updated for  1
+new neighbor: 4
+new latency: 10000000
+run_bellman_ford for id:  1
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  2
+neighbor not in neighbor dvs
+for neighbor:  3
+neighbor not in neighbor dvs
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2, 3, 4]
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+my neighbor_dvs: 
+{2: {'seq': 2, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]]}}, 6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+for neighbor:  6
+current dest:  6
+new cost:  1
+current cost:  1
+no need for change
+current dest:  5
+new cost:  7
+current cost:  7
+no need for change
+current dest:  4
+new cost:  9
+current cost:  9
+no need for change
+current dest:  3
+new cost:  2
+current cost:  0
+no need for change
+current dest:  2
+new cost:  7
+current cost:  5
+no need for change
+current dest:  1
+new cost:  9
+current cost:  7
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}}
+for neighbor:  5
+neighbor not in neighbor dvs
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  3
+current dest:  3
+new cost:  1
+current cost:  1
+no need for change
+current dest:  2
+new cost:  6
+current cost:  6
+no need for change
+current dest:  1
+new cost:  8
+current cost:  8
+no need for change
+current dest:  6
+new cost:  2
+current cost:  0
+no need for change
+current dest:  5
+new cost:  8
+current cost:  6
+no need for change
+current dest:  4
+new cost:  10
+current cost:  8
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+link_has_been_updated for  2
+new neighbor: 5
+new latency: 10000000
+run_bellman_ford for id:  2
+my dv before: 
+{}
+my neighbor_dvs: 
+{3: {'seq': 2, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]]}}}
+for neighbor:  1
+neighbor not in neighbor dvs
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (10000000, [5])}
+DV HAS BEEN UPDATED, BROADCASTING TO [1, 3, 5]
+link_has_been_updated for  5
+new neighbor: 2
+new latency: 10000000
+run_bellman_ford for id:  5
+my dv before: 
+{}
+my neighbor_dvs: 
+{}
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  6
+neighbor not in neighbor dvs
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (10000000, [2])}
+DV HAS BEEN UPDATED, BROADCASTING TO [4, 6, 2]
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4])}
+my neighbor_dvs: 
+{3: {'seq': 2, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]]}}}
+for neighbor:  2
+neighbor not in neighbor dvs
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+my neighbor_dvs: 
+{2: {'seq': 2, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]]}}, 6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 1: {'seq': 2, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  17
+current cost:  5
+no need for change
+current dest:  3
+new cost:  14
+current cost:  0
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  1
+current cost:  1
+no need for change
+current dest:  5
+new cost:  7
+current cost:  7
+no need for change
+current dest:  4
+new cost:  9
+current cost:  9
+no need for change
+current dest:  3
+new cost:  2
+current cost:  0
+no need for change
+current dest:  2
+new cost:  7
+current cost:  5
+no need for change
+current dest:  1
+new cost:  9
+current cost:  7
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (10000000, [5])}
+my neighbor_dvs: 
+{3: {'seq': 2, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]]}}, 1: {'seq': 1, 'dv': {1: [0, []], 2: [10, [2]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (10000000, [5])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4])}
+my neighbor_dvs: 
+{3: {'seq': 2, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]]}}, 2: {'seq': 1, 'dv': {2: [0, []], 1: [10, [1]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4])}
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 5: {'seq': 2, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  3
+current dest:  3
+new cost:  1
+current cost:  1
+no need for change
+current dest:  2
+new cost:  6
+current cost:  6
+no need for change
+current dest:  1
+new cost:  8
+current cost:  8
+no need for change
+current dest:  6
+new cost:  2
+current cost:  0
+no need for change
+current dest:  5
+new cost:  8
+current cost:  6
+no need for change
+current dest:  4
+new cost:  10
+current cost:  8
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (10000000, [2])}
+my neighbor_dvs: 
+{6: {'seq': 1, 'dv': {6: [0, []], 5: [6, [5]]}}}
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (10000000, [2])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4])}
+my neighbor_dvs: 
+{3: {'seq': 2, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]]}}, 2: {'seq': 2, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4])}
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (10000000, [2])}
+my neighbor_dvs: 
+{6: {'seq': 2, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]]}}}
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (10000000, [2])}
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (10000000, [5])}
+my neighbor_dvs: 
+{3: {'seq': 3, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]]}}, 1: {'seq': 1, 'dv': {1: [0, []], 2: [10, [2]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  6
+new cost:  6
+dest didnt exist in dv, adding...
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (10000000, [5]), 6: (6, [3, 6])}
+DV HAS BEEN UPDATED, BROADCASTING TO [1, 3, 5]
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (10000000, [5]), 6: (6, [3, 6])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 1: {'seq': 1, 'dv': {1: [0, []], 2: [10, [2]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  10000000
+new cost cheaper
+current dest:  4
+new cost:  14
+dest didnt exist in dv, adding...
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+DV HAS BEEN UPDATED, BROADCASTING TO [1, 3, 5]
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (10000000, [2])}
+my neighbor_dvs: 
+{6: {'seq': 3, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]]}}}
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  3
+new cost:  7
+dest didnt exist in dv, adding...
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (10000000, [2]), 3: (7, [6, 3])}
+DV HAS BEEN UPDATED, BROADCASTING TO [4, 6, 2]
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 1: {'seq': 2, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  17
+current cost:  5
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  12
+no need for change
+current dest:  4
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (10000000, [2]), 3: (7, [6, 3])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}}
+for neighbor:  4
+neighbor not in neighbor dvs
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10000000
+new cost cheaper
+current dest:  1
+new cost:  14
+dest didnt exist in dv, adding...
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+DV HAS BEEN UPDATED, BROADCASTING TO [4, 6, 2]
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4])}
+my neighbor_dvs: 
+{3: {'seq': 3, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]]}}, 2: {'seq': 2, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  6
+new cost:  8
+dest didnt exist in dv, adding...
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4]), 6: (8, [3, 6])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2, 3, 4]
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 5: {'seq': 2, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]]}}, 4: {'seq': 2, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  19
+current cost:  6
+no need for change
+current dest:  6
+new cost:  16
+current cost:  0
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  1
+current cost:  1
+no need for change
+current dest:  2
+new cost:  6
+current cost:  6
+no need for change
+current dest:  1
+new cost:  8
+current cost:  8
+no need for change
+current dest:  6
+new cost:  2
+current cost:  0
+no need for change
+current dest:  5
+new cost:  8
+current cost:  6
+no need for change
+current dest:  4
+new cost:  10
+current cost:  8
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (10000000, [1])}
+my neighbor_dvs: 
+{6: {'seq': 2, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]]}}}
+for neighbor:  5
+neighbor not in neighbor dvs
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (10000000, [1])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+my neighbor_dvs: 
+{2: {'seq': 3, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]]}}, 6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 1: {'seq': 2, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+current dest:  5
+new cost:  10000005
+current cost:  7
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  17
+current cost:  5
+no need for change
+current dest:  3
+new cost:  14
+current cost:  0
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  1
+current cost:  1
+no need for change
+current dest:  5
+new cost:  7
+current cost:  7
+no need for change
+current dest:  4
+new cost:  9
+current cost:  9
+no need for change
+current dest:  3
+new cost:  2
+current cost:  0
+no need for change
+current dest:  2
+new cost:  7
+current cost:  5
+no need for change
+current dest:  1
+new cost:  9
+current cost:  7
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (10000000, [4]), 6: (8, [3, 6])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 2: {'seq': 2, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+dest didnt exist in dv, adding...
+current dest:  4
+new cost:  16
+current cost:  10000000
+new cost cheaper
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2, 3, 4]
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (10000000, [1])}
+my neighbor_dvs: 
+{6: {'seq': 2, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]]}}, 5: {'seq': 1, 'dv': {5: [0, []], 4: [11, [4]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (10000000, [1])}
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (10000000, [1])}
+my neighbor_dvs: 
+{6: {'seq': 3, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]]}}, 5: {'seq': 1, 'dv': {5: [0, []], 4: [11, [4]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  3
+new cost:  9
+dest didnt exist in dv, adding...
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (10000000, [1]), 3: (9, [6, 3])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5, 6, 1]
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 5: {'seq': 3, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]]}}, 4: {'seq': 2, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+current dest:  2
+new cost:  10000006
+current cost:  6
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  19
+current cost:  6
+no need for change
+current dest:  6
+new cost:  16
+current cost:  0
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  1
+current cost:  1
+no need for change
+current dest:  2
+new cost:  6
+current cost:  6
+no need for change
+current dest:  1
+new cost:  8
+current cost:  8
+no need for change
+current dest:  6
+new cost:  2
+current cost:  0
+no need for change
+current dest:  5
+new cost:  8
+current cost:  6
+no need for change
+current dest:  4
+new cost:  10
+current cost:  8
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 4: {'seq': 1, 'dv': {4: [0, []], 5: [11, [5]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  12
+no need for change
+current dest:  1
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+my neighbor_dvs: 
+{2: {'seq': 3, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]]}}, 6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 1: {'seq': 3, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+current dest:  5
+new cost:  10000005
+current cost:  7
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  17
+current cost:  5
+no need for change
+current dest:  3
+new cost:  14
+current cost:  0
+no need for change
+current dest:  4
+new cost:  10000007
+current cost:  9
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  1
+current cost:  1
+no need for change
+current dest:  5
+new cost:  7
+current cost:  7
+no need for change
+current dest:  4
+new cost:  9
+current cost:  9
+no need for change
+current dest:  3
+new cost:  2
+current cost:  0
+no need for change
+current dest:  2
+new cost:  7
+current cost:  5
+no need for change
+current dest:  1
+new cost:  9
+current cost:  7
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (10000000, [1]), 3: (9, [6, 3])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 5: {'seq': 1, 'dv': {5: [0, []], 4: [11, [4]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  3
+new cost:  9
+current cost:  9
+no need for change
+current dest:  2
+new cost:  14
+dest didnt exist in dv, adding...
+current dest:  1
+new cost:  16
+current cost:  10000000
+new cost cheaper
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5, 6, 1]
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 5: {'seq': 2, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  17
+current cost:  8
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  3
+new cost:  9
+current cost:  9
+no need for change
+current dest:  2
+new cost:  14
+current cost:  14
+no need for change
+current dest:  1
+new cost:  16
+current cost:  16
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 5: {'seq': 3, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]]}}, 4: {'seq': 3, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+current dest:  2
+new cost:  10000006
+current cost:  6
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  19
+current cost:  6
+no need for change
+current dest:  6
+new cost:  16
+current cost:  0
+no need for change
+current dest:  1
+new cost:  10000008
+current cost:  8
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  1
+current cost:  1
+no need for change
+current dest:  2
+new cost:  6
+current cost:  6
+no need for change
+current dest:  1
+new cost:  8
+current cost:  8
+no need for change
+current dest:  6
+new cost:  2
+current cost:  0
+no need for change
+current dest:  5
+new cost:  8
+current cost:  6
+no need for change
+current dest:  4
+new cost:  10
+current cost:  8
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]], 6: [6, [3, 6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+my neighbor_dvs: 
+{2: {'seq': 4, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]], 6: [6, [3, 6]]}}, 6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 1: {'seq': 3, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+current dest:  5
+new cost:  10000005
+current cost:  7
+no need for change
+current dest:  6
+new cost:  11
+current cost:  1
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  17
+current cost:  5
+no need for change
+current dest:  3
+new cost:  14
+current cost:  0
+no need for change
+current dest:  4
+new cost:  10000007
+current cost:  9
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  1
+current cost:  1
+no need for change
+current dest:  5
+new cost:  7
+current cost:  7
+no need for change
+current dest:  4
+new cost:  9
+current cost:  9
+no need for change
+current dest:  3
+new cost:  2
+current cost:  0
+no need for change
+current dest:  2
+new cost:  7
+current cost:  5
+no need for change
+current dest:  1
+new cost:  9
+current cost:  7
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 4: {'seq': 2, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  19
+current cost:  6
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  12
+no need for change
+current dest:  1
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 1: {'seq': 3, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  17
+current cost:  5
+no need for change
+current dest:  4
+new cost:  10000010
+current cost:  14
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  12
+no need for change
+current dest:  4
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+my neighbor_dvs: 
+{2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}, 6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 1: {'seq': 3, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+current dest:  5
+new cost:  17
+current cost:  7
+no need for change
+current dest:  6
+new cost:  11
+current cost:  1
+no need for change
+current dest:  4
+new cost:  19
+current cost:  9
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  17
+current cost:  5
+no need for change
+current dest:  3
+new cost:  14
+current cost:  0
+no need for change
+current dest:  4
+new cost:  10000007
+current cost:  9
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  1
+current cost:  1
+no need for change
+current dest:  5
+new cost:  7
+current cost:  7
+no need for change
+current dest:  4
+new cost:  9
+current cost:  9
+no need for change
+current dest:  3
+new cost:  2
+current cost:  0
+no need for change
+current dest:  2
+new cost:  7
+current cost:  5
+no need for change
+current dest:  1
+new cost:  9
+current cost:  7
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]], 3: [7, [6, 3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 5: {'seq': 4, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]], 3: [7, [6, 3]]}}, 4: {'seq': 3, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+current dest:  2
+new cost:  10000006
+current cost:  6
+no need for change
+current dest:  3
+new cost:  13
+current cost:  1
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  19
+current cost:  6
+no need for change
+current dest:  6
+new cost:  16
+current cost:  0
+no need for change
+current dest:  1
+new cost:  10000008
+current cost:  8
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  1
+current cost:  1
+no need for change
+current dest:  2
+new cost:  6
+current cost:  6
+no need for change
+current dest:  1
+new cost:  8
+current cost:  8
+no need for change
+current dest:  6
+new cost:  2
+current cost:  0
+no need for change
+current dest:  5
+new cost:  8
+current cost:  6
+no need for change
+current dest:  4
+new cost:  10
+current cost:  8
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 2: {'seq': 3, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+current dest:  5
+new cost:  10000010
+current cost:  14
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  14
+no need for change
+current dest:  4
+new cost:  16
+current cost:  16
+no need for change
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 4: {'seq': 3, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  19
+current cost:  6
+no need for change
+current dest:  1
+new cost:  10000011
+current cost:  14
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  12
+no need for change
+current dest:  1
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 5: {'seq': 3, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  17
+current cost:  8
+no need for change
+current dest:  2
+new cost:  10000011
+current cost:  14
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  3
+new cost:  9
+current cost:  9
+no need for change
+current dest:  2
+new cost:  14
+current cost:  14
+no need for change
+current dest:  1
+new cost:  16
+current cost:  16
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+checking all paths starting from Node #1...
+student's solution is correct!
+
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}, 4: {'seq': 3, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+current dest:  2
+new cost:  18
+current cost:  6
+no need for change
+current dest:  3
+new cost:  13
+current cost:  1
+no need for change
+current dest:  1
+new cost:  20
+current cost:  8
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  19
+current cost:  6
+no need for change
+current dest:  6
+new cost:  16
+current cost:  0
+no need for change
+current dest:  1
+new cost:  10000008
+current cost:  8
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  1
+current cost:  1
+no need for change
+current dest:  2
+new cost:  6
+current cost:  6
+no need for change
+current dest:  1
+new cost:  8
+current cost:  8
+no need for change
+current dest:  6
+new cost:  2
+current cost:  0
+no need for change
+current dest:  5
+new cost:  8
+current cost:  6
+no need for change
+current dest:  4
+new cost:  10
+current cost:  8
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 3: (1, [3]), 2: (6, [3, 2]), 1: (8, [3, 1])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]], 6: [8, [3, 6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+my neighbor_dvs: 
+{2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}, 6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 1: {'seq': 4, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]], 6: [8, [3, 6]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+current dest:  5
+new cost:  17
+current cost:  7
+no need for change
+current dest:  6
+new cost:  11
+current cost:  1
+no need for change
+current dest:  4
+new cost:  19
+current cost:  9
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  17
+current cost:  5
+no need for change
+current dest:  3
+new cost:  14
+current cost:  0
+no need for change
+current dest:  4
+new cost:  10000007
+current cost:  9
+no need for change
+current dest:  6
+new cost:  15
+current cost:  1
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  1
+current cost:  1
+no need for change
+current dest:  5
+new cost:  7
+current cost:  7
+no need for change
+current dest:  4
+new cost:  9
+current cost:  9
+no need for change
+current dest:  3
+new cost:  2
+current cost:  0
+no need for change
+current dest:  2
+new cost:  7
+current cost:  5
+no need for change
+current dest:  1
+new cost:  9
+current cost:  7
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 6: (1, [6]), 5: (7, [6, 5]), 4: (9, [6, 4])}
+link_has_been_updated for  3
+new neighbor: 6
+new latency: -1
+removing
+run_bellman_ford for id:  3
+my dv before: 
+{}
+my neighbor_dvs: 
+{2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}, 1: {'seq': 4, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]], 6: [8, [3, 6]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+current dest:  5
+new cost:  17
+dest didnt exist in dv, adding...
+current dest:  6
+new cost:  11
+dest didnt exist in dv, adding...
+current dest:  4
+new cost:  19
+dest didnt exist in dv, adding...
+for neighbor:  1
+current dest:  1
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  17
+current cost:  5
+no need for change
+current dest:  3
+new cost:  14
+current cost:  0
+no need for change
+current dest:  4
+new cost:  10000007
+current cost:  19
+no need for change
+current dest:  6
+new cost:  15
+current cost:  11
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 5: (17, [2, 3, 6, 5]), 6: (11, [2, 3, 6]), 4: (19, [2, 3, 6, 4])}
+DV HAS BEEN UPDATED, BROADCASTING TO [2, 1]
+link_has_been_updated for  6
+new neighbor: 3
+new latency: -1
+removing
+run_bellman_ford for id:  6
+my dv before: 
+{}
+my neighbor_dvs: 
+{5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}, 4: {'seq': 3, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+current dest:  2
+new cost:  18
+dest didnt exist in dv, adding...
+current dest:  3
+new cost:  13
+dest didnt exist in dv, adding...
+current dest:  1
+new cost:  20
+dest didnt exist in dv, adding...
+for neighbor:  4
+current dest:  4
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  19
+current cost:  6
+no need for change
+current dest:  6
+new cost:  16
+current cost:  0
+no need for change
+current dest:  1
+new cost:  10000008
+current cost:  20
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 2: (18, [5, 6, 3, 2]), 3: (13, [5, 6, 3]), 1: (20, [5, 6, 3, 1])}
+DV HAS BEEN UPDATED, BROADCASTING TO [5, 4]
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  3
+my dv before: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 5: (17, [2, 3, 6, 5]), 6: (11, [2, 3, 6]), 4: (19, [2, 3, 6, 4])}
+my neighbor_dvs: 
+{2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}, 1: {'seq': 5, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  5
+current cost:  5
+no need for change
+current dest:  1
+new cost:  15
+current cost:  7
+no need for change
+current dest:  3
+new cost:  10
+current cost:  0
+no need for change
+current dest:  5
+new cost:  17
+current cost:  17
+no need for change
+current dest:  6
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  19
+current cost:  19
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  17
+current cost:  5
+no need for change
+current dest:  3
+new cost:  14
+current cost:  0
+no need for change
+current dest:  4
+new cost:  23
+current cost:  19
+no need for change
+current dest:  6
+new cost:  15
+current cost:  11
+no need for change
+current dest:  5
+new cost:  21
+current cost:  17
+no need for change
+my dv after: 
+{3: (0, []), 2: (5, [2]), 1: (7, [1]), 5: (17, [2, 3, 6, 5]), 6: (11, [2, 3, 6]), 4: (19, [2, 3, 6, 4])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]], 6: [6, [3, 6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 2: {'seq': 4, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]], 6: [6, [3, 6]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+current dest:  5
+new cost:  10000010
+current cost:  14
+no need for change
+current dest:  6
+new cost:  16
+current cost:  8
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  14
+no need for change
+current dest:  4
+new cost:  16
+current cost:  16
+no need for change
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+current dest:  5
+new cost:  22
+current cost:  14
+no need for change
+current dest:  6
+new cost:  16
+current cost:  8
+no need for change
+current dest:  4
+new cost:  24
+current cost:  16
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  14
+no need for change
+current dest:  4
+new cost:  16
+current cost:  16
+no need for change
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]], 3: [9, [6, 3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 2: (18, [5, 6, 3, 2]), 3: (13, [5, 6, 3]), 1: (20, [5, 6, 3, 1])}
+my neighbor_dvs: 
+{5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}, 4: {'seq': 4, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]], 3: [9, [6, 3]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+current dest:  2
+new cost:  18
+current cost:  18
+no need for change
+current dest:  3
+new cost:  13
+current cost:  13
+no need for change
+current dest:  1
+new cost:  20
+current cost:  20
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  19
+current cost:  6
+no need for change
+current dest:  6
+new cost:  16
+current cost:  0
+no need for change
+current dest:  1
+new cost:  10000008
+current cost:  20
+no need for change
+current dest:  3
+new cost:  17
+current cost:  13
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 2: (18, [5, 6, 3, 2]), 3: (13, [5, 6, 3]), 1: (20, [5, 6, 3, 1])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]], 6: [8, [3, 6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 1: {'seq': 4, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]], 6: [8, [3, 6]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  17
+current cost:  5
+no need for change
+current dest:  4
+new cost:  10000010
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  6
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  12
+no need for change
+current dest:  4
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  6
+my dv before: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 2: (18, [5, 6, 3, 2]), 3: (13, [5, 6, 3]), 1: (20, [5, 6, 3, 1])}
+my neighbor_dvs: 
+{5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}, 4: {'seq': 5, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  6
+current cost:  6
+no need for change
+current dest:  4
+new cost:  17
+current cost:  8
+no need for change
+current dest:  6
+new cost:  12
+current cost:  0
+no need for change
+current dest:  2
+new cost:  18
+current cost:  18
+no need for change
+current dest:  3
+new cost:  13
+current cost:  13
+no need for change
+current dest:  1
+new cost:  20
+current cost:  20
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  19
+current cost:  6
+no need for change
+current dest:  6
+new cost:  16
+current cost:  0
+no need for change
+current dest:  1
+new cost:  24
+current cost:  20
+no need for change
+current dest:  3
+new cost:  17
+current cost:  13
+no need for change
+current dest:  2
+new cost:  22
+current cost:  18
+no need for change
+my dv after: 
+{6: (0, []), 5: (6, [5]), 4: (8, [4]), 2: (18, [5, 6, 3, 2]), 3: (13, [5, 6, 3]), 1: (20, [5, 6, 3, 1])}
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]], 3: [7, [6, 3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 5: {'seq': 4, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]], 3: [7, [6, 3]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  17
+current cost:  8
+no need for change
+current dest:  2
+new cost:  10000011
+current cost:  14
+no need for change
+current dest:  3
+new cost:  18
+current cost:  9
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  3
+new cost:  9
+current cost:  9
+no need for change
+current dest:  2
+new cost:  14
+current cost:  14
+no need for change
+current dest:  1
+new cost:  16
+current cost:  16
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+my neighbor_dvs: 
+{3: {'seq': 4, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 6: [1, [6]], 5: [7, [6, 5]], 4: [9, [6, 4]]}}, 1: {'seq': 5, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  17
+current cost:  5
+no need for change
+current dest:  4
+new cost:  26
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  6
+no need for change
+current dest:  5
+new cost:  24
+current cost:  12
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  12
+no need for change
+current dest:  4
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  17
+current cost:  8
+no need for change
+current dest:  2
+new cost:  23
+current cost:  14
+no need for change
+current dest:  3
+new cost:  18
+current cost:  9
+no need for change
+current dest:  1
+new cost:  25
+current cost:  16
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  3
+new cost:  9
+current cost:  9
+no need for change
+current dest:  2
+new cost:  14
+current cost:  14
+no need for change
+current dest:  1
+new cost:  16
+current cost:  16
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+my neighbor_dvs: 
+{3: {'seq': 5, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}}, 1: {'seq': 5, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  17
+current cost:  5
+no need for change
+current dest:  4
+new cost:  26
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  6
+no need for change
+current dest:  5
+new cost:  24
+current cost:  12
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  5
+new cost:  22
+current cost:  12
+no need for change
+current dest:  6
+new cost:  16
+current cost:  6
+no need for change
+current dest:  4
+new cost:  24
+current cost:  14
+no need for change
+for neighbor:  5
+neighbor not in neighbor dvs
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]], 3: [9, [6, 3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 4: {'seq': 4, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]], 3: [9, [6, 3]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  19
+current cost:  6
+no need for change
+current dest:  1
+new cost:  10000011
+current cost:  14
+no need for change
+current dest:  3
+new cost:  20
+current cost:  7
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  12
+no need for change
+current dest:  1
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 4, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 3: [1, [3]], 2: [6, [3, 2]], 1: [8, [3, 1]]}}, 4: {'seq': 5, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  19
+current cost:  6
+no need for change
+current dest:  1
+new cost:  27
+current cost:  14
+no need for change
+current dest:  3
+new cost:  20
+current cost:  7
+no need for change
+current dest:  2
+new cost:  25
+current cost:  12
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  12
+no need for change
+current dest:  1
+new cost:  14
+current cost:  14
+no need for change
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 5, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}}, 4: {'seq': 5, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  19
+current cost:  6
+no need for change
+current dest:  1
+new cost:  27
+current cost:  14
+no need for change
+current dest:  3
+new cost:  20
+current cost:  7
+no need for change
+current dest:  2
+new cost:  25
+current cost:  12
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  2
+new cost:  24
+current cost:  12
+no need for change
+current dest:  3
+new cost:  19
+current cost:  7
+no need for change
+current dest:  1
+new cost:  26
+current cost:  14
+no need for change
+for neighbor:  2
+neighbor not in neighbor dvs
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+my neighbor_dvs: 
+{3: {'seq': 5, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}}, 2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+current dest:  5
+new cost:  22
+current cost:  14
+no need for change
+current dest:  6
+new cost:  16
+current cost:  8
+no need for change
+current dest:  4
+new cost:  24
+current cost:  16
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  5
+new cost:  24
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  8
+no need for change
+current dest:  4
+new cost:  26
+current cost:  16
+no need for change
+for neighbor:  4
+neighbor not in neighbor dvs
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+process_incoming_routing_message
+{6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+my neighbor_dvs: 
+{6: {'seq': 5, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}}, 5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  17
+current cost:  8
+no need for change
+current dest:  2
+new cost:  23
+current cost:  14
+no need for change
+current dest:  3
+new cost:  18
+current cost:  9
+no need for change
+current dest:  1
+new cost:  25
+current cost:  16
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  2
+new cost:  26
+current cost:  14
+no need for change
+current dest:  3
+new cost:  21
+current cost:  9
+no need for change
+current dest:  1
+new cost:  28
+current cost:  16
+no need for change
+for neighbor:  1
+neighbor not in neighbor dvs
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+my neighbor_dvs: 
+{3: {'seq': 5, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}}, 2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}, 4: {'seq': 3, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+current dest:  5
+new cost:  22
+current cost:  14
+no need for change
+current dest:  6
+new cost:  16
+current cost:  8
+no need for change
+current dest:  4
+new cost:  24
+current cost:  16
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  5
+new cost:  24
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  8
+no need for change
+current dest:  4
+new cost:  26
+current cost:  16
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  10000000
+current cost:  16
+no need for change
+current dest:  5
+new cost:  10000011
+current cost:  14
+no need for change
+current dest:  6
+new cost:  10000008
+current cost:  8
+no need for change
+current dest:  1
+new cost:  20000000
+current cost:  0
+no need for change
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+my neighbor_dvs: 
+{6: {'seq': 5, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}}, 5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}, 1: {'seq': 3, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  17
+current cost:  8
+no need for change
+current dest:  2
+new cost:  23
+current cost:  14
+no need for change
+current dest:  3
+new cost:  18
+current cost:  9
+no need for change
+current dest:  1
+new cost:  25
+current cost:  16
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  2
+new cost:  26
+current cost:  14
+no need for change
+current dest:  3
+new cost:  21
+current cost:  9
+no need for change
+current dest:  1
+new cost:  28
+current cost:  16
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  10000000
+current cost:  16
+no need for change
+current dest:  2
+new cost:  10000010
+current cost:  14
+no need for change
+current dest:  3
+new cost:  10000007
+current cost:  9
+no need for change
+current dest:  4
+new cost:  20000000
+current cost:  0
+no need for change
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 5, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}}, 4: {'seq': 5, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}}, 2: {'seq': 3, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  19
+current cost:  6
+no need for change
+current dest:  1
+new cost:  27
+current cost:  14
+no need for change
+current dest:  3
+new cost:  20
+current cost:  7
+no need for change
+current dest:  2
+new cost:  25
+current cost:  12
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  2
+new cost:  24
+current cost:  12
+no need for change
+current dest:  3
+new cost:  19
+current cost:  7
+no need for change
+current dest:  1
+new cost:  26
+current cost:  14
+no need for change
+for neighbor:  2
+current dest:  2
+new cost:  10000000
+current cost:  12
+no need for change
+current dest:  1
+new cost:  10000010
+current cost:  14
+no need for change
+current dest:  3
+new cost:  10000005
+current cost:  7
+no need for change
+current dest:  5
+new cost:  20000000
+current cost:  0
+no need for change
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]]}
+this is a new neighbordb
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+my neighbor_dvs: 
+{3: {'seq': 5, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}}, 1: {'seq': 5, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}}, 5: {'seq': 3, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  17
+current cost:  5
+no need for change
+current dest:  4
+new cost:  26
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  6
+no need for change
+current dest:  5
+new cost:  24
+current cost:  12
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  5
+new cost:  22
+current cost:  12
+no need for change
+current dest:  6
+new cost:  16
+current cost:  6
+no need for change
+current dest:  4
+new cost:  24
+current cost:  14
+no need for change
+for neighbor:  5
+current dest:  5
+new cost:  10000000
+current cost:  12
+no need for change
+current dest:  4
+new cost:  10000011
+current cost:  14
+no need for change
+current dest:  6
+new cost:  10000006
+current cost:  6
+no need for change
+current dest:  2
+new cost:  20000000
+current cost:  0
+no need for change
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]], 6: [6, [3, 6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 5, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}}, 4: {'seq': 5, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}}, 2: {'seq': 4, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [10000000, [5]], 6: [6, [3, 6]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  19
+current cost:  6
+no need for change
+current dest:  1
+new cost:  27
+current cost:  14
+no need for change
+current dest:  3
+new cost:  20
+current cost:  7
+no need for change
+current dest:  2
+new cost:  25
+current cost:  12
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  2
+new cost:  24
+current cost:  12
+no need for change
+current dest:  3
+new cost:  19
+current cost:  7
+no need for change
+current dest:  1
+new cost:  26
+current cost:  14
+no need for change
+for neighbor:  2
+current dest:  2
+new cost:  10000000
+current cost:  12
+no need for change
+current dest:  1
+new cost:  10000010
+current cost:  14
+no need for change
+current dest:  3
+new cost:  10000005
+current cost:  7
+no need for change
+current dest:  5
+new cost:  20000000
+current cost:  0
+no need for change
+current dest:  6
+new cost:  10000006
+current cost:  6
+no need for change
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  5
+my dv before: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+my neighbor_dvs: 
+{6: {'seq': 5, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}}, 4: {'seq': 5, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}}, 2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}}
+for neighbor:  4
+current dest:  4
+new cost:  11
+current cost:  11
+no need for change
+current dest:  5
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  19
+current cost:  6
+no need for change
+current dest:  1
+new cost:  27
+current cost:  14
+no need for change
+current dest:  3
+new cost:  20
+current cost:  7
+no need for change
+current dest:  2
+new cost:  25
+current cost:  12
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  6
+current cost:  6
+no need for change
+current dest:  5
+new cost:  12
+current cost:  0
+no need for change
+current dest:  4
+new cost:  14
+current cost:  11
+no need for change
+current dest:  2
+new cost:  24
+current cost:  12
+no need for change
+current dest:  3
+new cost:  19
+current cost:  7
+no need for change
+current dest:  1
+new cost:  26
+current cost:  14
+no need for change
+for neighbor:  2
+current dest:  2
+new cost:  10000000
+current cost:  12
+no need for change
+current dest:  1
+new cost:  10000010
+current cost:  14
+no need for change
+current dest:  3
+new cost:  10000005
+current cost:  7
+no need for change
+current dest:  5
+new cost:  10000012
+current cost:  0
+no need for change
+current dest:  6
+new cost:  10000006
+current cost:  6
+no need for change
+current dest:  4
+new cost:  10000014
+current cost:  11
+no need for change
+my dv after: 
+{5: (0, []), 4: (11, [4]), 6: (6, [6]), 2: (12, [6, 3, 2]), 3: (7, [6, 3]), 1: (14, [6, 3, 1])}
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]], 3: [7, [6, 3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+my neighbor_dvs: 
+{3: {'seq': 5, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}}, 1: {'seq': 5, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}}, 5: {'seq': 4, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [10000000, [2]], 3: [7, [6, 3]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  17
+current cost:  5
+no need for change
+current dest:  4
+new cost:  26
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  6
+no need for change
+current dest:  5
+new cost:  24
+current cost:  12
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  5
+new cost:  22
+current cost:  12
+no need for change
+current dest:  6
+new cost:  16
+current cost:  6
+no need for change
+current dest:  4
+new cost:  24
+current cost:  14
+no need for change
+for neighbor:  5
+current dest:  5
+new cost:  10000000
+current cost:  12
+no need for change
+current dest:  4
+new cost:  10000011
+current cost:  14
+no need for change
+current dest:  6
+new cost:  10000006
+current cost:  6
+no need for change
+current dest:  2
+new cost:  20000000
+current cost:  0
+no need for change
+current dest:  3
+new cost:  10000007
+current cost:  5
+no need for change
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+process_incoming_routing_message
+{5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  2
+my dv before: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+my neighbor_dvs: 
+{3: {'seq': 5, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}}, 1: {'seq': 5, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}}, 5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}}
+for neighbor:  1
+current dest:  1
+new cost:  10
+current cost:  10
+no need for change
+current dest:  2
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  17
+current cost:  5
+no need for change
+current dest:  4
+new cost:  26
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  6
+no need for change
+current dest:  5
+new cost:  24
+current cost:  12
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  5
+current cost:  5
+no need for change
+current dest:  2
+new cost:  10
+current cost:  0
+no need for change
+current dest:  1
+new cost:  12
+current cost:  10
+no need for change
+current dest:  5
+new cost:  22
+current cost:  12
+no need for change
+current dest:  6
+new cost:  16
+current cost:  6
+no need for change
+current dest:  4
+new cost:  24
+current cost:  14
+no need for change
+for neighbor:  5
+current dest:  5
+new cost:  10000000
+current cost:  12
+no need for change
+current dest:  4
+new cost:  10000011
+current cost:  14
+no need for change
+current dest:  6
+new cost:  10000006
+current cost:  6
+no need for change
+current dest:  2
+new cost:  10000012
+current cost:  0
+no need for change
+current dest:  3
+new cost:  10000007
+current cost:  5
+no need for change
+current dest:  1
+new cost:  10000014
+current cost:  10
+no need for change
+my dv after: 
+{2: (0, []), 1: (10, [1]), 3: (5, [3]), 5: (12, [3, 6, 5]), 6: (6, [3, 6]), 4: (14, [3, 6, 4])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]], 6: [8, [3, 6]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+my neighbor_dvs: 
+{6: {'seq': 5, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}}, 5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}, 1: {'seq': 4, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [10000000, [4]], 6: [8, [3, 6]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  17
+current cost:  8
+no need for change
+current dest:  2
+new cost:  23
+current cost:  14
+no need for change
+current dest:  3
+new cost:  18
+current cost:  9
+no need for change
+current dest:  1
+new cost:  25
+current cost:  16
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  2
+new cost:  26
+current cost:  14
+no need for change
+current dest:  3
+new cost:  21
+current cost:  9
+no need for change
+current dest:  1
+new cost:  28
+current cost:  16
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  10000000
+current cost:  16
+no need for change
+current dest:  2
+new cost:  10000010
+current cost:  14
+no need for change
+current dest:  3
+new cost:  10000007
+current cost:  9
+no need for change
+current dest:  4
+new cost:  20000000
+current cost:  0
+no need for change
+current dest:  6
+new cost:  10000008
+current cost:  8
+no need for change
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]], 3: [9, [6, 3]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+my neighbor_dvs: 
+{3: {'seq': 5, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}}, 2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}, 4: {'seq': 4, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [10000000, [1]], 3: [9, [6, 3]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+current dest:  5
+new cost:  22
+current cost:  14
+no need for change
+current dest:  6
+new cost:  16
+current cost:  8
+no need for change
+current dest:  4
+new cost:  24
+current cost:  16
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  5
+new cost:  24
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  8
+no need for change
+current dest:  4
+new cost:  26
+current cost:  16
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  10000000
+current cost:  16
+no need for change
+current dest:  5
+new cost:  10000011
+current cost:  14
+no need for change
+current dest:  6
+new cost:  10000008
+current cost:  8
+no need for change
+current dest:  1
+new cost:  20000000
+current cost:  0
+no need for change
+current dest:  3
+new cost:  10000009
+current cost:  7
+no need for change
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+process_incoming_routing_message
+{1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  4
+my dv before: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+my neighbor_dvs: 
+{6: {'seq': 5, 'dv': {6: [0, []], 5: [6, [5]], 4: [8, [4]], 2: [18, [5, 6, 3, 2]], 3: [13, [5, 6, 3]], 1: [20, [5, 6, 3, 1]]}}, 5: {'seq': 5, 'dv': {5: [0, []], 4: [11, [4]], 6: [6, [6]], 2: [12, [6, 3, 2]], 3: [7, [6, 3]], 1: [14, [6, 3, 1]]}}, 1: {'seq': 5, 'dv': {1: [0, []], 2: [10, [2]], 3: [7, [3]], 4: [16, [3, 6, 4]], 6: [8, [3, 6]], 5: [14, [3, 6, 5]]}}}
+for neighbor:  5
+current dest:  5
+new cost:  11
+current cost:  11
+no need for change
+current dest:  4
+new cost:  22
+current cost:  0
+no need for change
+current dest:  6
+new cost:  17
+current cost:  8
+no need for change
+current dest:  2
+new cost:  23
+current cost:  14
+no need for change
+current dest:  3
+new cost:  18
+current cost:  9
+no need for change
+current dest:  1
+new cost:  25
+current cost:  16
+no need for change
+for neighbor:  6
+current dest:  6
+new cost:  8
+current cost:  8
+no need for change
+current dest:  5
+new cost:  14
+current cost:  11
+no need for change
+current dest:  4
+new cost:  16
+current cost:  0
+no need for change
+current dest:  2
+new cost:  26
+current cost:  14
+no need for change
+current dest:  3
+new cost:  21
+current cost:  9
+no need for change
+current dest:  1
+new cost:  28
+current cost:  16
+no need for change
+for neighbor:  1
+current dest:  1
+new cost:  10000000
+current cost:  16
+no need for change
+current dest:  2
+new cost:  10000010
+current cost:  14
+no need for change
+current dest:  3
+new cost:  10000007
+current cost:  9
+no need for change
+current dest:  4
+new cost:  10000016
+current cost:  0
+no need for change
+current dest:  6
+new cost:  10000008
+current cost:  8
+no need for change
+current dest:  5
+new cost:  10000014
+current cost:  11
+no need for change
+my dv after: 
+{4: (0, []), 5: (11, [5]), 6: (8, [6]), 1: (16, [6, 3, 1]), 3: (9, [6, 3]), 2: (14, [6, 3, 2])}
+process_incoming_routing_message
+{4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}
+this is a new seq
+running bf
+run_bellman_ford for id:  1
+my dv before: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+my neighbor_dvs: 
+{3: {'seq': 5, 'dv': {3: [0, []], 2: [5, [2]], 1: [7, [1]], 5: [17, [2, 3, 6, 5]], 6: [11, [2, 3, 6]], 4: [19, [2, 3, 6, 4]]}}, 2: {'seq': 5, 'dv': {2: [0, []], 1: [10, [1]], 3: [5, [3]], 5: [12, [3, 6, 5]], 6: [6, [3, 6]], 4: [14, [3, 6, 4]]}}, 4: {'seq': 5, 'dv': {4: [0, []], 5: [11, [5]], 6: [8, [6]], 1: [16, [6, 3, 1]], 3: [9, [6, 3]], 2: [14, [6, 3, 2]]}}}
+for neighbor:  2
+current dest:  2
+new cost:  10
+current cost:  10
+no need for change
+current dest:  1
+new cost:  20
+current cost:  0
+no need for change
+current dest:  3
+new cost:  15
+current cost:  7
+no need for change
+current dest:  5
+new cost:  22
+current cost:  14
+no need for change
+current dest:  6
+new cost:  16
+current cost:  8
+no need for change
+current dest:  4
+new cost:  24
+current cost:  16
+no need for change
+for neighbor:  3
+current dest:  3
+new cost:  7
+current cost:  7
+no need for change
+current dest:  2
+new cost:  12
+current cost:  10
+no need for change
+current dest:  1
+new cost:  14
+current cost:  0
+no need for change
+current dest:  5
+new cost:  24
+current cost:  14
+no need for change
+current dest:  6
+new cost:  18
+current cost:  8
+no need for change
+current dest:  4
+new cost:  26
+current cost:  16
+no need for change
+for neighbor:  4
+current dest:  4
+new cost:  10000000
+current cost:  16
+no need for change
+current dest:  5
+new cost:  10000011
+current cost:  14
+no need for change
+current dest:  6
+new cost:  10000008
+current cost:  8
+no need for change
+current dest:  1
+new cost:  10000016
+current cost:  0
+no need for change
+current dest:  3
+new cost:  10000009
+current cost:  7
+no need for change
+current dest:  2
+new cost:  10000014
+current cost:  10
+no need for change
+my dv after: 
+{1: (0, []), 2: (10, [2]), 3: (7, [3]), 4: (16, [3, 6, 4]), 6: (8, [3, 6]), 5: (14, [3, 6, 5])}
+checking all paths starting from Node #1...
+from 1 to 4:
+correct_path: (length=10000000) [1, 4]
+student_path: (length=inf) []
+from 1 to 6:
+correct_path: (length=10000008) [1, 4, 6]
+student_path: (length=inf) []
+from 1 to 5:
+correct_path: (length=10000010) [1, 2, 5]
+student_path: (length=inf) []
+student's solution is incorrect!
+
