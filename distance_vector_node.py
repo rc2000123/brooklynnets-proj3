@@ -32,13 +32,15 @@ class Distance_Vector_Node(Node):
         copy_dv = copy.deepcopy(self.dv)
         
         if self.dv == {}:
-            self.dv = {self.id: (0, [])}
+            self.dv = {self.id: (0, [self.id])}
             
         #dv should be updated with all nodes before fcn call
         for neighbor in self.neighbors:
             print("for neighbor: ",neighbor)
             if neighbor not in self.neighbor_dvs:
                 print("neighbor not in neighbor dvs")
+                #may need to add something
+                
                 continue
             
             neighbor_dv = self.neighbor_dvs[neighbor]["dv"]
@@ -72,12 +74,17 @@ class Distance_Vector_Node(Node):
                    'dv': self.dv, 
                    'id': self.id}
         
+        
+        print("my dv after: ")
+        
+        print(self.dv)
+        
         if self.dv != copy_dv:
-            print("new dv")
+            print("DV HAS BEEN UPDATED, BROADCASTING TO", self.neighbors)
             self.send_to_neighbors(json.dumps(package))
 
             self.seq += 1
-        time.sleep(0.5)
+        #time.sleep(0.5)
 
 
 
@@ -114,8 +121,8 @@ class Distance_Vector_Node(Node):
         
             self.outbound_links[neighbor] = latency
         
-        if latency != -1:
-            self.dv[neighbor] = (latency, [neighbor])
+        #if latency != -1:
+        #    self.dv[neighbor] = (latency, [neighbor])
         self.run_bellman_ford()
             
 
@@ -138,9 +145,11 @@ class Distance_Vector_Node(Node):
 
         if id not in self.neighbor_dvs.keys():
             # this is a new neighbordb
-            self.neighbor_dvs[id] = {"seq": 0, "dv": new_neighbor_dv}
+            self.neighbor_dvs[id] = {"seq": seq, "dv": new_neighbor_dv}
+            print("this is a new neighbordb")
         else:
-            if (seq > self.seq):
+            if (seq > self.neighbor_dvs[id]["seq"]):
+                print("this is a new seq")
                 self.neighbor_dvs[id]["seq"] = seq
                 self.neighbor_dvs[id]['dv'] = new_neighbor_dv
             
