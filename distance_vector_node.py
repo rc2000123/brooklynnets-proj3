@@ -33,6 +33,12 @@ class Distance_Vector_Node(Node):
         
         if self.dv == {}:
             self.dv = {self.id: (0, [self.id])}
+        
+        
+        #if you are my neighbor but your not in my DV, add you to 
+        for neighbor in self.neighbors:
+            if neighbor not in self.dv:
+                self.dv[neighbor] = (self.outbound_links[neighbor],[neighbor])
             
         #dv should be updated with all nodes before fcn call
         for neighbor in self.neighbors:
@@ -123,6 +129,8 @@ class Distance_Vector_Node(Node):
         
         #if latency != -1:
         #    self.dv[neighbor] = (latency, [neighbor])
+        
+        self.dv = {}
         self.run_bellman_ford()
             
 
