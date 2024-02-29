@@ -1,3 +1,4 @@
+
 from simulator.node import Node
 import json
 import copy
@@ -65,8 +66,9 @@ class Distance_Vector_Node(Node):
                 
                 if dest not in self.dv:
                     #print("dest didnt exist in dv, adding...")
-                    path = copy.deepcopy(shortest_time_and_path[1])
-                    path = [neighbor] + path
+                    #path = copy.deepcopy(shortest_time_and_path[1])
+                    #path = [neighbor] + path
+                    path = [neighbor] + shortest_time_and_path[1]
                     self.dv[dest] = (new_cost, path)
                 else:  
                     #print("current cost: ", self.dv[dest][0])
@@ -78,9 +80,10 @@ class Distance_Vector_Node(Node):
                         #print("new cost cheaper")
                         #input()
                         #add the node to the front of the path, update my dv path, and the new cost
-                        path = copy.deepcopy(shortest_time_and_path[1])
-                        path = [neighbor] + path
+                        #path = copy.deepcopy(shortest_time_and_path[1])
+                        #path = [neighbor] + path
                         #seq = value[0] + 1
+                        path = [neighbor] + shortest_time_and_path[1]
                         self.dv[dest] = (new_cost, path)
                     else:
                         #print("no need for change")
@@ -204,6 +207,9 @@ class Distance_Vector_Node(Node):
                 #print("this is a new seq")
                 self.neighbor_dvs[id]["seq"] = seq
                 self.neighbor_dvs[id]['dv'] = new_neighbor_dv
+            else:
+                #the DV can be discarded, no need to run bellman/broadcast
+                return
             
             
         #print("running bf")
