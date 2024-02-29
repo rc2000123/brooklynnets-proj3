@@ -7,8 +7,8 @@ class Distance_Vector_Node(Node):
     def __init__(self, id):
         super().__init__(id)
         self.id = id
-        #key : dest node, value: seq, cost, path
-        self.dv = {id: (0, 0, [])}
+        #key : dest node, value: cost, path
+        self.dv = {id: (0, [])}
         self.seq = 1
         self.received_seq = {}
 
@@ -20,26 +20,35 @@ class Distance_Vector_Node(Node):
         
         
     def run_bellman_ford(self):
+
+        
         copy_dv = copy.deepcopy(self.dv)
         #dv should be updated with all nodes before fcn call
         for neighbor in self.neighbors:
             if neighbor not in self.neighbor_dvs:
                 continue
-            dv = self.neighbor_dvs[neighbor]
+            neighbor_dv = self.neighbor_dvs[neighbor]
 
-            for node, value in dv.items():
-                new_cost = self.outbound_links[node] + value[1]
-                if new_cost < self.dv[neighbor][1] and self.id not in value[2]:
-                    path = copy.deepcopy(value[2])
-                    path = path.insert(0, node)
-                    seq = value[0] + 1
-                    self.dv[node] = (seq, new_cost, path)
+            for dest, value in neighbor_dv.items():
+                #new cost is going to this neighbor, and taking the nodes dv 
+                new_cost = self.outbound_links[neighbor] + value[1]
+
+                #if the new cost is faster than the cost I have in my dv and that I am not in the path
+                if new_cost < self.dv[dest][1] and (self.id not in value[1]):
+                    print("new cost cheaper")
+                    #add the node to the front of the path, update my dv path, and the new cost
+                    path = copy.deepcopy(value[1])
+                    path = [neighbor] + path
+                    #seq = value[0] + 1
+                    self.dv[dest] = (new_cost, path)
 
         package = {'seq': self.seq, 
                    'dv': self.dv, 
                    'id': self.id}
         print(copy_dv, self.dv)
+        
         if self.dv != copy_dv:
+            print("new dv")
             self.send_to_neighbors(json.dumps(package))
 
             self.seq += 1
@@ -68,12 +77,12 @@ class Distance_Vector_Node(Node):
             if neighbor not in self.neighbors:
                 self.neighbors.append(neighbor)
                 # self.neighbor_dvs[neighbor] = {neighbor: (0, latency, [neighbor])}
-                self.dv[neighbor] = (0, latency, [neighbor])
-               
-            else:
-                self.dv[neighbor] = (0, latency, [neighbor])
+
 
             # self.dv[neighbor] = (0, latency, [neighbor])
+        
+        
+        
             self.outbound_links[neighbor] = latency
 
         print(self.id, self.neighbors, self.neighbor_dvs)
