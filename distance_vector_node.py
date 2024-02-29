@@ -9,6 +9,8 @@ class Distance_Vector_Node(Node):
         self.id = id
         #key : dest node, value: seq, cost, path
         self.dv = {id: (0, 0, [])}
+        self.seq = 1
+        self.received_seq = {}
 
         self.outbound_links = {}
 
@@ -18,28 +20,29 @@ class Distance_Vector_Node(Node):
         
         
     def run_bellman_ford(self):
-        temp_dv = {}
-        dist = {}
-        prev = {}
-        for v in self.dv.keys():
-            dist[v] = float('inf')
-            prev[v] = None
-        
-        dist[self.id] = 0
-
+        copy_dv = copy.deepcopy(self.dv)
         #dv should be updated with all nodes before fcn call
         for neighbor in self.neighbors:
+            if neighbor not in self.neighbor_dvs:
+                continue
             dv = self.neighbor_dvs[neighbor]
 
             for node, value in dv.items():
                 new_cost = self.outbound_links[node] + value[1]
                 if new_cost < self.dv[neighbor][1] and self.id not in value[2]:
                     path = copy.deepcopy(value[2])
-                    path = [node] + path
+                    path = path.insert(0, node)
                     seq = value[0] + 1
-                    self.dv[node] = (seq,new_cost, path)
+                    self.dv[node] = (seq, new_cost, path)
 
-        self.send_to_neighbors(json.dumps(self.dv))
+        package = {'seq': self.seq, 
+                   'dv': self.dv, 
+                   'id': self.id}
+        print(copy_dv, self.dv)
+        if self.dv != copy_dv:
+            self.send_to_neighbors(json.dumps(package))
+
+            self.seq += 1
 
 
 
@@ -59,21 +62,37 @@ class Distance_Vector_Node(Node):
 
             self.neighbors.remove(neighbor)
             del self.dv[neighbor]
-            self.outbound_links.remove(neighbor)
+            del self.outbound_links[neighbor]
             
         else:
             if neighbor not in self.neighbors:
                 self.neighbors.append(neighbor)
+                # self.neighbor_dvs[neighbor] = {neighbor: (0, latency, [neighbor])}
+                self.dv[neighbor] = (0, latency, [neighbor])
                
+            else:
+                self.dv[neighbor] = (0, latency, [neighbor])
 
             # self.dv[neighbor] = (0, latency, [neighbor])
             self.outbound_links[neighbor] = latency
+
+        print(self.id, self.neighbors, self.neighbor_dvs)
                     
         self.run_bellman_ford()
             
 
     # Fill in this function
     def process_incoming_routing_message(self, m):
+        neighbor_dv = json.loads(m)
+        seq = neighbor_dv['seq']
+        id = neighbor_dv['id']
+
+        if id in self.received_seq and seq > self.received_seq[id]:
+            self.neighbor_dvs[id] = neighbor_dv['dv']
+            self.received_seq[id] = seq
+
+        print("running bf")
+        self.run_bellman_ford()
 
         
 
